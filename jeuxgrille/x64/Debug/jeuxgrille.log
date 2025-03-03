@@ -16,5 +16,6 @@ C:\Users\felix\Documents\ETS\projet_perso\jeuxGrille\jeuxgrille\affichage.cpp(25
 C:\Users\felix\Documents\ETS\projet_perso\jeuxGrille\jeuxgrille\affichage.cpp(253,71): warning C4244: '=' : conversion de 'double' en 'LONG', perte possible de données
 C:\Users\felix\Documents\ETS\projet_perso\jeuxGrille\jeuxgrille\affichage.cpp(271,13): warning C4244: 'return' : conversion de 'double' en 'int', perte possible de données
 C:\Users\felix\Documents\ETS\projet_perso\jeuxGrille\jeuxgrille\affichage.cpp(294,10): warning C4244: 'initialisation' : conversion de 'double' en 'int', perte possible de données
-C:\Users\felix\Documents\ETS\projet_perso\jeuxGrille\jeuxgrille\affichage.cpp(320,10): warning C4244: 'initialisation' : conversion de 'double' en 'int', perte possible de données
+C:\Users\felix\Documents\ETS\projet_perso\jeuxGrille\jeuxgrille\affichage.cpp(313,17): warning C4244: 'initialisation' : conversion de 'double' en 'int', perte possible de données
+C:\Users\felix\Documents\ETS\projet_perso\jeuxGrille\jeuxgrille\affichage.cpp(330,10): warning C4244: 'initialisation' : conversion de 'double' en 'int', perte possible de données
   jeuxgrille.vcxproj -> C:\Users\felix\Documents\ETS\projet_perso\jeuxGrille\jeuxgrille\x64\Debug\jeuxgrille.exe

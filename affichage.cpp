@@ -304,9 +304,17 @@ void spriteDansBufferMeilleur(rect4coin rect, int** sprite, BUFFER buffer, int i
 	int hauteur = HAUTEUR_DE_BASE_SPRITE / (indice_grandeur), largeur = LARGEUR_DE_BASE_SPRITE/indice_grandeur;
 	int xi = rect.haut_gauche.x;
 	int yi = rect.haut_gauche.y;
-	int n = 0;
+
+
+	/* n: nombre de ligne trassée 
+	   mod: L'inverse de la pente b permet de diminuer les y en fonction de la pente 
+	   valeur_y_sprite: composent y du point de couleur qui sera pris du sprite
+	   */
+	int n = 0, mod = abs(1/b), valeur_y_sprite;
+
+
 	while(n < (int)(hauteur*(1 + abs(b)))) {
-		if (n % ((int)(1 / abs(b))+1) == 0) {
+		if (n % (mod+1) == mod){
 			yi--;
 			n++;
 		}
@@ -315,11 +323,13 @@ void spriteDansBufferMeilleur(rect4coin rect, int** sprite, BUFFER buffer, int i
 			n++;
 		}
 		double a = (double)((rect.haut_droit.y + (n * c)) - (rect.haut_gauche.y + (n * b)))/ (double)(rect.haut_droit.x - rect.haut_gauche.x);
+
+		valeur_y_sprite = (int)((n - 1) * indice_grandeur / (1 + abs(b)));
 		for (int i = 0; i < largeur; i++) {
 			int x = xi + (i);
 			int y = yi + (i) * a;
 
-			EcrireDansBuffer(buffer, OuDansBuffer(buffer, x, y), sprite[(int)(n * indice_grandeur/ (1 + abs(b)))][i * indice_grandeur]);
+			EcrireDansBuffer(buffer, OuDansBuffer(buffer, x, y), sprite[valeur_y_sprite][i * indice_grandeur]);
 		}
 	}
 }
